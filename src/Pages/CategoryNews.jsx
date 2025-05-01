@@ -8,7 +8,7 @@ const CategoryNews = () => {
     
     return (
         <div className=''>
-          <h1 className='font-bold '>  All Categories-({categories.length} )</h1>
+          <h1 className='font-bold '>  All Categories- <span className='text-orange-700'>{categories.length} </span></h1>
           <div className='grid grid-cols-1 mt-5 gap-3 '>
           {
             categories.map((category)=>(<NavLink className={'btn bg-base-100 hover:bg-gray-200 border-0 font-semibold text-accent '}  to={`/category/${category.id}`} key={category.id}>{category.name}</NavLink>))
@@ -17,5 +17,5 @@ const CategoryNews = () => {
         </div>
     );
 };
-
+ 
 export default CategoryNews;

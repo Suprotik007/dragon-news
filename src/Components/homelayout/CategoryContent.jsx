@@ -30,7 +30,7 @@ const [categoryContent,setCategoryContent]=useState([])
                 </h1> 
             </div>
 
-            <div className='grid grid-cols-1 gap-5'>
+            <div className='grid grid-cols-1  gap-5'>
                 {
                     categoryContent.map((news)=>(
                         <NewsCard key={news.id} news={news}>
