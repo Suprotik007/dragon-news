@@ -17,7 +17,8 @@ import CategoryContent from "./Components/homelayout/CategoryContent";
         },
         {
           path:'/category/:id',
-          element:<CategoryContent></CategoryContent>
+          element:<CategoryContent></CategoryContent>,
+          loader:()=>fetch('/news.json')
         },
 
       ]

@@ -6,7 +6,7 @@ const NavBar = () => {
     return (
         <div className='flex justify-between mx- mt-9 items-center'>
             <div></div>
-            <div className='nav flex gap-5'>
+            <div className='nav flex gap-15 font-semibold '>
                 <NavLink to='/'>Home</NavLink>
                 <NavLink to='/about'>About</NavLink>
                 <NavLink to='/career'>Career</NavLink>
