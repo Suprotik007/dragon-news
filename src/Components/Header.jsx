@@ -12,9 +12,9 @@ const Header = () => {
        <p className='text-accent text-semibold'>{format(new Date(),"EEEE,MMMM MM,yyyy")}</p>
     
         </div>
-        <Latest></Latest>
+        {/* <Latest></Latest> */}
         <div>
-            <NavBar></NavBar>
+            {/* <NavBar></NavBar> */}
         </div>
         </div>
     );
