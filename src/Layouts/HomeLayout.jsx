@@ -21,13 +21,13 @@ const HomeLayout = () => {
 </nav>
 
             <main className='mx-auto w-11/12 my-3 *: grid grid-cols-12'>
-               <aside className='col-span-3'>
+               <aside className='col-span-3 mt-20'>
                 <LeftAside></LeftAside>
                 </aside>
-                <section className='main col-span-6'>
+                <section className='main col-span-6 mt-20'>
                     <Outlet></Outlet>
                 </section>
-                <aside className='col-span-3'>
+                <aside className='col-span-3 mt-20'>
                     <RightAside></RightAside>
                     </aside>
             </main>

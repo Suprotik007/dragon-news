@@ -7,11 +7,13 @@ const CategoryNews = () => {
     const categories=use(categoryPromise)
     
     return (
-        <div className='grid grid-cols-1'>
+        <div className=''>
           <h1 className='font-bold '>  All Categories-({categories.length} )</h1>
+          <div className='grid grid-cols-1 mt-5 gap-3 '>
           {
-            categories.map((category)=>(<NavLink>{category.name}</NavLink>))
+            categories.map((category)=>(<NavLink className={'btn bg-base-100 hover:bg-gray-200 border-0 font-semibold text-accent '}  to={`/category/${category.id}`} key={category.id}>{category.name}</NavLink>))
           }
+          </div>
         </div>
     );
 };
