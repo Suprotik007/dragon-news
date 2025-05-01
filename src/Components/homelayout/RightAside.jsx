@@ -1,13 +1,16 @@
 import React, { Suspense } from 'react';
 import SocialLogin from './SocialLogin';
+import FindUs from './FindUs';
+import Qzone from './Qzone';
 
 const RightAside = () => {
     return (
         <div>
-            <div>
-            <Suspense fallback={<span className="loading loading-dots loading-xl"></span>}>
+            <div className='space-y-8'>
+            
             <SocialLogin></SocialLogin>
-            </Suspense>
+            <FindUs></FindUs>
+            <Qzone></Qzone>
            
         </div>
         </div>
