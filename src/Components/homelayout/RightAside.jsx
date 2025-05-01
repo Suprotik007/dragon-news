@@ -1,9 +1,15 @@
-import React from 'react';
+import React, { Suspense } from 'react';
+import SocialLogin from './SocialLogin';
 
 const RightAside = () => {
     return (
         <div>
-            Right Aside
+            <div>
+            <Suspense fallback={<span className="loading loading-dots loading-xl"></span>}>
+            <SocialLogin></SocialLogin>
+            </Suspense>
+           
+        </div>
         </div>
     );
 };
