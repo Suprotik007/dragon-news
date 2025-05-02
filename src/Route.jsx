@@ -7,6 +7,7 @@ import CategoryContent from "./Components/homelayout/CategoryContent";
 import Login from "./Pages/Login";
 import Register from "./Register";
 import AuthLayout from "./Layouts/AuthLayout";
+import NewsDtl from "./Pages/NewsDtl";
   
   
   const router = createBrowserRouter([
@@ -23,6 +24,7 @@ import AuthLayout from "./Layouts/AuthLayout";
           element:<CategoryContent></CategoryContent>,
           loader:()=>fetch('/news.json')
         },
+        
 
       ]
     },
@@ -50,5 +52,10 @@ element:<Register></Register>
       path: "/*",
       element: <h1>Error-404 </h1>
     },
+    {
+      path:'/news-details/:id',
+      element:<NewsDtl></NewsDtl>,
+      loader:()=>fetch('/news.json')
+    }
   ]); 
   export default router

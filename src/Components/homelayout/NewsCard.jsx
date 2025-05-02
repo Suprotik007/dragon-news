@@ -4,6 +4,7 @@ import { FaRegShareSquare, FaStar, FaEye } from "react-icons/fa";
 import { format } from "date-fns";
 import { CiBookmark } from "react-icons/ci";
 import { CiShare2 } from "react-icons/ci";
+import { Link } from "react-router";
 
 export default function NewsCard({ news }) {
   return (
@@ -14,7 +15,7 @@ export default function NewsCard({ news }) {
           <img
             src={news.author.img}
             alt={news.author.name}
-            className="w-8 h-8 rounded-full object-cover"
+            className="w-8 h-8 rounded-full object-cover" 
           />
           <div>
             <div className="font-semibold text-sm">{news.author.name}</div>
@@ -32,7 +33,7 @@ export default function NewsCard({ news }) {
       {/* Title */}
       <div className="px-4 pt-4 pb-1">
         <h2 className="card-title text-base leading-tight">{news.title}</h2>
-      </div>
+      </div> 
 
       {/* Image */}
       <figure>
@@ -57,9 +58,9 @@ export default function NewsCard({ news }) {
           ))}
         </div>
         <p className="text-sm text-gray-700 line-clamp-2">{news.details.slice(0, 160)}...</p>
-        <a href="#" className="text-orange-500 text-sm font-semibold block mt-1">
+       <p><Link to={`/news-details/${news.id}`}> <a href="#" className="text-orange-500 text-sm font-semibold block mt-1">
           Read More
-        </a>
+        </a></Link></p>
       </div>
 
       {/* Footer */}
