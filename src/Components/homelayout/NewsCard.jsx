@@ -58,9 +58,9 @@ export default function NewsCard({ news }) {
           ))}
         </div>
         <p className="text-sm text-gray-700 line-clamp-2">{news.details.slice(0, 160)}...</p>
-       <p><Link to={`/news-details/${news.id}`}> <a href="#" className="text-orange-500 text-sm font-semibold block mt-1">
+       <Link to={`/news-details/${news.id}`}> <p className="text-orange-500 text-sm font-semibold block mt-1">
           Read More
-        </a></Link></p>
+        </p></Link>
       </div>
 
       {/* Footer */}

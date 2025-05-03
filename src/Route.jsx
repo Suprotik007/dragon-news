@@ -8,6 +8,7 @@ import Login from "./Pages/Login";
 import Register from "./Register";
 import AuthLayout from "./Layouts/AuthLayout";
 import NewsDtl from "./Pages/NewsDtl";
+import PrivateRoute from "./Provider/PrivateRoute";
   
   
   const router = createBrowserRouter([
@@ -54,7 +55,9 @@ element:<Register></Register>
     },
     {
       path:'/news-details/:id',
-      element:<NewsDtl></NewsDtl>,
+      element:(<PrivateRoute>
+        <NewsDtl></NewsDtl>
+      </PrivateRoute>),
       loader:()=>fetch('/news.json')
     }
   ]); 
